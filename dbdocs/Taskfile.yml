@@ -1,0 +1,12 @@
+version: "3"
+
+tasks:
+  lint:
+    cmds:
+      - dbdocs validate database.dbml
+    silent: true
+
+  deploy:
+    cmds:
+      - dbdocs build database.dbml
+    silent: true
