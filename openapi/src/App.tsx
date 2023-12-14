@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       {/* <SwaggerUI url={`${origin}/doc/openapi.yaml`} /> */}
-      <SwaggerUI url={`.vercel/output/static/openapi.yaml`} />
+      <SwaggerUI url={'https://light-planck.github.io/nemmy/openapi/openapi.yaml'} />
     </div>
   );
 };
