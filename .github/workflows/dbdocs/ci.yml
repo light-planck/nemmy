@@ -1,9 +1,11 @@
-name: CI
+name: CI dbdocs
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "dbdocs/**"
 
 jobs:
   build:

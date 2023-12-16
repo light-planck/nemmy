@@ -1,0 +1,41 @@
+name: CI frontend
+
+on:
+  push:
+    branches:
+      - "*"
+    paths:
+      - "frontend/**"
+  pull_request:
+    branches:
+      - "*"
+    paths:
+      - "frontend/**"
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Change directory
+        run: cd frontend
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: format
+        run: bun run prettier --write '**/*.{js,ts,jsx,tsx}'
+
+      - name: lint
+        run: bun run lint:fix
+
+      - name: build
+        run: bun run build
