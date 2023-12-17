@@ -4,7 +4,7 @@ Government of the nemmy, by the nemmy, for the nemmy.
 
 ## URL
 
-nemmy.vercel.app
+<https://nemmy.vercel.app/>
 
 ## プロジェクト構成
 
