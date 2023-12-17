@@ -1,15 +1,16 @@
 # nemmy
 
-To install dependencies:
+Government of the nemmy, by the nemmy, for the nemmy.
 
-```bash
-bun install
-```
+## URL
 
-To run:
+nemmy.vercel.app
 
-```bash
-bun run index.ts
-```
+## プロジェクト構成
 
-This project was created using `bun init` in bun v1.0.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+| ディレクトリ | 役割 | リンク |
+| ------- | ------- | ------- |
+| /frontend | フロントエンド | <https://nemmy.vercel.app/> |
+| /backend | バックエンド | <https://github.com/ynm3n/nemmy-backend-sandbox> |
+| /openapi | apiの仕様 | <https://nemmy-openapi.vercel.app/> |
+| /dbdocs | データベースの仕様 | <https://dbdocs.io/light-planck/nemmy> |
