@@ -8,5 +8,13 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "frontend/lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "node frontend/.lintstagedrc.js"
   }
 }
