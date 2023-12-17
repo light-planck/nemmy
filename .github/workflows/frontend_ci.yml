@@ -29,6 +29,7 @@ jobs:
 
       - name: Install husky
         run: bunx husky install
+        working-directory: frontend
 
       - name: format
         run: bun run prettier --write '**/*.{js,ts,jsx,tsx}'
