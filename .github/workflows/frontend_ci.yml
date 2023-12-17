@@ -23,17 +23,18 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Change directory
-        run: cd frontend
-
       - name: Install dependencies
         run: bun install
+        working-directory: frontend
 
       - name: format
         run: bun run prettier --write '**/*.{js,ts,jsx,tsx}'
+        working-directory: frontend
 
       - name: lint
         run: bun run lint:fix
+        working-directory: frontend
 
       - name: build
         run: bun run build
+        working-directory: frontend

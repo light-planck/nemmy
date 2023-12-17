@@ -25,6 +25,8 @@ jobs:
 
       - name: Check dbdocs
         run: dbdocs
+        working-directory: dbdocs
 
       - name: Validate dbdocs
         run: dbdocs validate database.dbml
+        working-directory: dbdocs
