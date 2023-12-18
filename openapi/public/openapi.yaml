@@ -1,37 +1,39 @@
 openapi: 3.0.0
 info:
-  title: Sample API
-  description: API description in Markdown.
+  title: nemmy API
+  description: |
+    nemmyで利用するAPIの仕様書です。<br />
+    http://localhost:8080/apiは仮のURLです。
   version: 1.0.0
 servers:
-  - url: http://api.example.com/v1
+  - url: http://localhost:8080/api
 paths:
-  /pets:
+  /users/{userId}/subjects:
     get:
-      summary: List all pets
-      operationId: listPets
+      summary: ユーザーに紐づく教材の一覧を取得
+      operationId: listUserSubjects
       tags:
-        - pets
+        - users
+        - subjects
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: string
       responses:
-        '200':
-          description: A paged array of pets
+        "200":
+          description: ユーザーに紐づく教材の一覧
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'
-    post:
-      summary: Create a pet
-      operationId: createPets
-      tags:
-        - pets
-      responses:
-        '201':
-          description: Null response
+                  $ref: "#/components/schemas/Subject"
 components:
   schemas:
-    Pet:
+    Subject:
       required:
         - id
         - name
@@ -39,7 +41,10 @@ components:
         id:
           type: integer
           format: int64
+        user_id:
+          type: integer
+          format: int64
         name:
           type: string
-        tag:
+        description:
           type: string
