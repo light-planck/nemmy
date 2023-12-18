@@ -13,7 +13,6 @@ paths:
       summary: ユーザーに紐づく教材の一覧を取得
       operationId: listUserSubjects
       tags:
-        - users
         - subjects
       parameters:
         - name: userId
