@@ -35,6 +35,6 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "bun run .lintstagedrc.js"
+    "*.{js,ts,tsx}": "node .lintstagedrc.js"
   }
 }
