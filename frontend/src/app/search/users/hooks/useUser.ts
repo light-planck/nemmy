@@ -10,7 +10,7 @@ export const useUser = () => {
   const [username, setUsername] = useState("");
   const { data, isMutating, trigger } = useSWRMutation<User>(
     getBaseURL() + `/users/${username}`,
-    fetcher,
+    fetcher
   );
 
   return {
