@@ -33,6 +33,43 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Subject"
+    post:
+      summary: ユーザーに紐づく教材を作成
+      operationId: createUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: string
+      requestBody:
+        description: ユーザーに紐づく教材の情報
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: integer
+                  format: int64
+                name:
+                  type: string
+                description:
+                  type: string
+              required:
+                - userId
+                - name
+      responses:
+        "201":
+          description: ユーザーに紐づく教材の作成
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Subject"
   /users/{userId}/subjects/{subjectId}:
     get:
       summary: ユーザーに紐づく教材の詳細を取得
