@@ -96,6 +96,38 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Subject"
+    put:
+      summary: ユーザーに紐づく教材の詳細を更新
+      operationId: updateUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      requestBody:
+        description: ユーザーに紐づく教材の情報
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Subject"
+      responses:
+        "200":
+          description: ユーザーに紐づく教材の更新
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Subject"
 
 components:
   schemas:
