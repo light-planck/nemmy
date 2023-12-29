@@ -1,12 +1,15 @@
-openapi: 3.0.0
+openapi: 3.1.0
+
 info:
   title: nemmy API
   description: |
     nemmyで利用するAPIの仕様書です。<br />
     http://localhost:8080/apiは仮のURLです。
   version: 1.0.0
+
 servers:
   - url: http://localhost:8080/api
+
 paths:
   /users/{userId}/subjects:
     get:
@@ -30,6 +33,33 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Subject"
+  /users/{userId}/subjects/{subjectId}:
+    get:
+      summary: ユーザーに紐づく教材の詳細を取得
+      operationId: getUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ユーザーに紐づく教材の詳細
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Subject"
+
 components:
   schemas:
     Subject:
@@ -40,7 +70,7 @@ components:
         id:
           type: integer
           format: int64
-        user_id:
+        userId:
           type: integer
           format: int64
         name:
