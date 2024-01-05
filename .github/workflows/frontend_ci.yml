@@ -28,7 +28,7 @@ jobs:
         working-directory: frontend
 
       - name: format
-        run: bun run prettier --write '**/*.{js,ts,jsx,tsx}'
+        run: bun run format
         working-directory: frontend
 
       - name: lint
