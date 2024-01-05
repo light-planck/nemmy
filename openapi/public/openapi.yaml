@@ -128,6 +128,27 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Subject"
+    delete:
+      summary: ユーザーに紐づく教材を削除
+      operationId: deleteUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      responses:
+        "204":
+          description: ユーザーに紐づく教材の削除
 
 components:
   schemas:
