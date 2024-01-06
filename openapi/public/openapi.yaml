@@ -11,17 +11,17 @@ servers:
   - url: http://localhost:8080/api
 
 paths:
-  /users/{userId}/subjects:
+  /users/{userName}/subjects:
     get:
       summary: ユーザーに紐づく教材の一覧を取得
       operationId: listUserSubjects
       tags:
         - subjects
       parameters:
-        - name: userId
+        - name: userName
           in: path
           required: true
-          description: ユーザーのID
+          description: ユーザーネーム
           schema:
             type: string
       responses:
@@ -39,10 +39,10 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userId
+        - name: userName
           in: path
           required: true
-          description: ユーザーのID
+          description: ユーザーネーム
           schema:
             type: string
       requestBody:
@@ -53,15 +53,14 @@ paths:
             schema:
               type: object
               properties:
-                userId:
-                  type: integer
-                  format: int64
+                userName:
+                  type: string
                 name:
                   type: string
                 description:
                   type: string
               required:
-                - userId
+                - userName
                 - name
       responses:
         "201":
@@ -70,17 +69,17 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Subject"
-  /users/{userId}/subjects/{subjectId}:
+  /users/{userName}/subjects/{subjectId}:
     get:
       summary: ユーザーに紐づく教材の詳細を取得
       operationId: getUserSubject
       tags:
         - subjects
       parameters:
-        - name: userId
+        - name: userName
           in: path
           required: true
-          description: ユーザーのID
+          description: ユーザーネーム
           schema:
             type: string
         - name: subjectId
@@ -102,10 +101,10 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userId
+        - name: userName
           in: path
           required: true
-          description: ユーザーのID
+          description: ユーザーネーム
           schema:
             type: string
         - name: subjectId
@@ -134,10 +133,10 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userId
+        - name: userName
           in: path
           required: true
-          description: ユーザーのID
+          description: ユーザーネーム
           schema:
             type: string
         - name: subjectId
@@ -160,9 +159,8 @@ components:
         id:
           type: integer
           format: int64
-        userId:
-          type: integer
-          format: int64
+        userName:
+          type: string
         name:
           type: string
         description:
