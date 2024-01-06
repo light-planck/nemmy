@@ -9,6 +9,6 @@ export const fetcher = (url: string) =>
     .catch((error) => {
       console.error(
         "There has been a problem with your fetch operation:",
-        error,
+        error
       );
     });
