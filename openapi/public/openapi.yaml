@@ -11,14 +11,14 @@ servers:
   - url: http://localhost:8080/api
 
 paths:
-  /users/{userName}/subjects:
+  /users/{username}/subjects:
     get:
       summary: ユーザーに紐づく教材の一覧を取得
       operationId: listUserSubjects
       tags:
         - subjects
       parameters:
-        - name: userName
+        - name: username
           in: path
           required: true
           description: ユーザーネーム
@@ -39,7 +39,7 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userName
+        - name: username
           in: path
           required: true
           description: ユーザーネーム
@@ -53,14 +53,14 @@ paths:
             schema:
               type: object
               properties:
-                userName:
+                username:
                   type: string
                 name:
                   type: string
                 description:
                   type: string
               required:
-                - userName
+                - username
                 - name
       responses:
         "201":
@@ -69,14 +69,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Subject"
-  /users/{userName}/subjects/{subjectId}:
+  /users/{username}/subjects/{subjectId}:
     get:
       summary: ユーザーに紐づく教材の詳細を取得
       operationId: getUserSubject
       tags:
         - subjects
       parameters:
-        - name: userName
+        - name: username
           in: path
           required: true
           description: ユーザーネーム
@@ -101,7 +101,7 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userName
+        - name: username
           in: path
           required: true
           description: ユーザーネーム
@@ -133,7 +133,7 @@ paths:
       tags:
         - subjects
       parameters:
-        - name: userName
+        - name: username
           in: path
           required: true
           description: ユーザーネーム
@@ -159,7 +159,7 @@ components:
         id:
           type: integer
           format: int64
-        userName:
+        username:
           type: string
         name:
           type: string
