@@ -8,10 +8,7 @@ on:
       - "*"
 
 defaults:
-  run:
-    working-directory: backend
-  uses:
-    working-directory: backend
+  working-directory: backend
 
 jobs:
   build:
