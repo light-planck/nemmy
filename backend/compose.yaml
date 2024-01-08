@@ -1,0 +1,47 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: app
+    ports:
+      - "${APP_HOST_PORT}:${APP_CONTAINER_PORT}"
+    depends_on:
+      db:
+        condition: service_healthy # https://docs.docker.jp/compose/compose-file/index.html#compose-spec-dpends-on-long-syntax
+    env_file:
+      - .env
+    develop:
+      watch:
+        - action: rebuild
+          path: ./cmd
+  db:
+    image: postgres:latest
+    volumes:
+      - type: volume
+        source: db-data
+        target: /var/lib/postgresql/data
+    env_file:
+      - .env
+    healthcheck:
+      test: "psql -U ${POSTGRES_USER}"
+      interval: 3s
+      timeout: 3s
+      retries: 5
+      start_period: 1s
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: migrate
+    profiles:
+      - migrate
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    entrypoint: ./migrate
+
+volumes:
+  db-data:
