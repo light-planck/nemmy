@@ -1,4 +1,4 @@
-module github.com/ynm3n/go-bun-exercise
+module github.com/light-planck/nemmy/backend
 
 go 1.21.0
 

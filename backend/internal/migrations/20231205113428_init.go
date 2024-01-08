@@ -3,8 +3,8 @@ package migrations
 import (
 	"context"
 
+	"github.com/light-planck/nemmy/backend/internal/models"
 	"github.com/uptrace/bun"
-	"github.com/ynm3n/go-bun-exercise/internal/models"
 )
 
 func init() {

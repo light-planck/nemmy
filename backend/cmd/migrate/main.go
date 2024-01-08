@@ -6,10 +6,10 @@ import (
 	"log"
 	"os"
 
+	"github.com/light-planck/nemmy/backend/internal"
+	"github.com/light-planck/nemmy/backend/internal/migrations"
 	"github.com/uptrace/bun/extra/bundebug"
 	"github.com/uptrace/bun/migrate"
-	"github.com/ynm3n/go-bun-exercise/internal"
-	"github.com/ynm3n/go-bun-exercise/internal/migrations"
 
 	"github.com/urfave/cli/v2"
 )

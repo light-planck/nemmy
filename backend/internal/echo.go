@@ -5,8 +5,8 @@ import (
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/light-planck/nemmy/backend/internal/models"
 	"github.com/uptrace/bun"
-	"github.com/ynm3n/go-bun-exercise/internal/models"
 )
 
 func NewEcho(cfg *Config, db *bun.DB) *echo.Echo {

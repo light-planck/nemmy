@@ -10,7 +10,7 @@ import (
 	"github.com/uptrace/bun/driver/pgdriver"
 	"github.com/uptrace/bun/migrate"
 
-	"github.com/ynm3n/go-bun-exercise/internal/migrations"
+	"github.com/light-planck/nemmy/backend/internal/migrations"
 )
 
 func NewDB(ctx context.Context, dsn string) (*bun.DB, error) {

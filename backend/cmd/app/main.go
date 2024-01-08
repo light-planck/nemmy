@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/ynm3n/go-bun-exercise/internal"
+	"github.com/light-planck/nemmy/backend/internal"
 )
 
 func main() {
