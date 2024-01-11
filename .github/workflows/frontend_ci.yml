@@ -1,9 +1,9 @@
-name: CI frontend
+name: ci frontend
 
 on:
   push:
     branches:
-      - "main"
+      - "*"
   pull_request:
     branches:
       - "*"
@@ -27,12 +27,8 @@ jobs:
         run: bun install
         working-directory: frontend
 
-      - name: format
-        run: bun run format
-        working-directory: frontend
-
-      - name: lint
-        run: bun run lint:fix
+      - name: check
+        run: bun run check
         working-directory: frontend
 
       - name: build
