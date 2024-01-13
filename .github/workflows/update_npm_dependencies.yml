@@ -1,8 +1,12 @@
-name: Auto Bun Update
+name: Update npm dependencies
 
 on:
   schedule:
     - cron: "0 15 * * 0" # Runs at 00:00 on Monday in Japan time (UTC+9)
+
+defaults:
+  run:
+    working-directory: frontend
 
 jobs:
   update:
