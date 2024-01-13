@@ -1,0 +1,39 @@
+name: Update npm dependencies
+
+on:
+  schedule:
+    - cron: "0 15 * * 0" # Runs at 00:00 on Monday in Japan time (UTC+9)
+
+defaults:
+  run:
+    working-directory: frontend
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Update npm dependencies
+        run: |
+          bun install
+          bun update
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Update npm dependencies"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update NPM dependencies"
+          title: "Update NPM dependencies"
+          body: "This PR updates the NPM dependencies to their latest versions."
+          branch: "chore(frontend): bun update"
