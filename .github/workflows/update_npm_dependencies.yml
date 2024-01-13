@@ -28,7 +28,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -am "Update npm dependencies"
-        working-directory: frontend
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
