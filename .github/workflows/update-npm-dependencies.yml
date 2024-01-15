@@ -34,7 +34,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          commit-message: "Update NPM dependencies"
+          commit-message: "chore(frontend): bun update"
           title: "Update NPM dependencies"
           body: "This PR updates the NPM dependencies to their latest versions."
-          branch: "chore(frontend): bun update"
+          branch: "chore/npm-update"
