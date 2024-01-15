@@ -24,8 +24,9 @@ jobs:
 
       - name: Update npm dependencies
         run: |
-          bun install
+          bun install --yarn
           bun update
+          diff <(bun bun.lockb) yarn.lock
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -am "Update npm dependencies"
@@ -33,8 +34,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          commit-message: "chore(frontend): bun update"
-          title: "Update NPM dependencies"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(deps): bun update"
+          title: "chore(deps): bun update"
           body: "This PR updates the NPM dependencies to their latest versions."
-          branch: "chore/npm-update"
+          branch: "chore/bun-update"
