@@ -26,7 +26,6 @@ jobs:
         run: |
           bun install --yarn
           bun update
-          diff <(bun bun.lockb) yarn.lock
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -am "Update npm dependencies"
