@@ -1,6 +1,7 @@
 name: Update npm dependencies
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 15 * * 0" # Runs at 00:00 on Monday in Japan time (UTC+9)
 
