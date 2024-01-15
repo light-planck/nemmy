@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    frontend-linter:
+      root: "frontend/"
+      glob: "*.{js,jsx,ts,tsx}"
+      run: bun next lint --fix --file {staged_files}
+    frontend-style:
+      root: "frontend/"
+      glob: "*.{js,jsx,ts,tsx}"
+      run: bun prettier --write {staged_files}
