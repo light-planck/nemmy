@@ -32,7 +32,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           commit-message: "Update NPM dependencies"
           title: "Update NPM dependencies"
           body: "This PR updates the NPM dependencies to their latest versions."
