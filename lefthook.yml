@@ -8,3 +8,7 @@ pre-commit:
     frontend-style:
       root: "frontend/"
       run: bun prettier --write --ignore-unknown {staged_files}
+    backend-linter:
+      root: "backend/"
+      glob: "*.{go}"
+      run: docker container run -q --rm -v $(pwd):/app -w /app golangci/golangci-lint:v1.55.2 golangci-lint run --fix {staged_files}
