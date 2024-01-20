@@ -5,7 +5,23 @@
 
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "github-actions"
+
   - package-ecosystem: "gomod" # See documentation for possible values
     directory: "/backend" # Location of package manifests
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "gomod"
+
+  - package-ecosystem: "docker"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "docker"
