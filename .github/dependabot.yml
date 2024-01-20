@@ -10,18 +10,18 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "github-actions"
+      prefix: "chore(github-actions)"
 
   - package-ecosystem: "gomod" # See documentation for possible values
     directory: "/backend" # Location of package manifests
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "gomod"
+      prefix: "chore(gomod)"
 
   - package-ecosystem: "docker"
     directory: "/backend"
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "docker"
+      prefix: "chore(docker)"
