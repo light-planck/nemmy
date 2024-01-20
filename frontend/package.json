@@ -11,10 +11,8 @@
     "check": "prettier --check '**/*.{js,jsx,ts,tsx}' && next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.2.9",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
-    "framer-motion": "^10.16.5",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
