@@ -4,7 +4,7 @@ pre-commit:
     frontend-linter:
       root: "frontend/"
       glob: "*.{js,jsx,ts,tsx}"
-      run: bun next lint --fix --file {staged_files}
+      run: bun eslint --fix {staged_files}
     frontend-style:
       root: "frontend/"
       run: bun prettier --write --ignore-unknown {staged_files}
