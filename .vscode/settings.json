@@ -3,7 +3,7 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
-  "editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
