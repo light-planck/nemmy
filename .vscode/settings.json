@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["labstack", "tailwindcss"],
+  "cSpell.words": ["labstack", "nemmy", "tailwindcss", "uptrace"],
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
