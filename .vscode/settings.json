@@ -7,8 +7,11 @@
   "[javascript][typescript][javascriptreact][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[go]": {
     "editor.defaultFormatter": "golang.go",
     "editor.insertSpaces": false
-  }
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--config=${workspaceFolder}/backend/.golangci.yml"]
 }
