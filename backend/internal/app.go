@@ -6,7 +6,7 @@ import (
 )
 
 func RunApp(ctx context.Context, cfg *Config) error {
-	db, err := NewDB(ctx, BuildDSN(cfg))
+	db, err := NewDB(ctx, cfg.DatabaseDSN)
 	if err != nil {
 		return fmt.Errorf("RunApp: %w", err)
 	}
