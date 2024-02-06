@@ -22,10 +22,6 @@ func NewDB(ctx context.Context, dsn string) (*bun.DB, error) {
 	return db, nil
 }
 
-func BuildDSN(cfg *Config) string {
-	return fmt.Sprintf("postgres://%[1]v:%[2]v@db/%[3]v?sslmode=disable", cfg.DBUser, cfg.DBPassword, cfg.DBName)
-}
-
 func Migrate(ctx context.Context, db *bun.DB) error {
 	migrator := migrate.NewMigrator(db, migrations.Migrations)
 	if err := migrator.Init(ctx); err != nil {

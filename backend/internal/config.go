@@ -22,7 +22,7 @@ func GetConfig() (*Config, error) {
 		return nil, fmt.Errorf("GetConfig: %w", err)
 	}
 	if len(cfg.DatabaseDSN) == 0 {
-		cfg.DatabaseDSN = BuildDSN(cfg)
+		cfg.DatabaseDSN = fmt.Sprintf("postgres://%[1]v:%[2]v@db/%[3]v?sslmode=disable", cfg.DBUser, cfg.DBPassword, cfg.DBName)
 	}
 	return cfg, nil
 }
