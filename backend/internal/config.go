@@ -7,9 +7,9 @@ import (
 )
 
 type Config struct {
-	Port        string `env:"APP_CONTAINER_PORT,required"`
+	Port        string `env:"APP_CONTAINER_PORT,notEmpty"`
 	DatabaseDSN string `env:"POSTGRES_DSN"`
-	FrontendURL string `env:"FRONTEND_URL,required"`
+	FrontendURL string `env:"FRONTEND_URL,notEmpty"`
 }
 
 func GetConfig() (*Config, error) {
