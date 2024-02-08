@@ -9,10 +9,10 @@ import (
 	"github.com/uptrace/bun"
 )
 
-func NewEcho(cfg *Config, db *bun.DB) *echo.Echo {
+func NewEcho(frontendURL string, db *bun.DB) *echo.Echo {
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{cfg.FrontendURL},
+		AllowOrigins: []string{frontendURL},
 		AllowMethods: []string{http.MethodGet, http.MethodPut, http.MethodPost, http.MethodDelete},
 	}))
 
