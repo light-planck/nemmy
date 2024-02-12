@@ -9,13 +9,29 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "Asia/Tokyo"
     commit-message:
       prefix: "chore(github-actions)"
 
-  - package-ecosystem: "gomod" # See documentation for possible values
-    directory: "/backend" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/frontend"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "chore(frontend)"
+
+  - package-ecosystem: "gomod"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "Asia/Tokyo"
     commit-message:
       prefix: "chore(gomod)"
 
@@ -23,5 +39,8 @@ updates:
     directory: "/backend"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "Asia/Tokyo"
     commit-message:
       prefix: "chore(docker)"
