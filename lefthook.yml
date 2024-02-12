@@ -4,10 +4,10 @@ pre-commit:
     frontend-linter:
       root: "frontend/"
       glob: "*.{js,jsx,ts,tsx}"
-      run: bun eslint --fix {staged_files}
+      run: pnpm eslint --fix {staged_files}
     frontend-style:
       root: "frontend/"
-      run: bun prettier --write --ignore-unknown {staged_files}
+      run: pnpm prettier --write --ignore-unknown {staged_files}
     backend-linter:
       root: "backend/"
       glob: "*.{go}"
