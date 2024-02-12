@@ -15,7 +15,7 @@ func RunApp(ctx context.Context, cfg *Config) error {
 		return fmt.Errorf("RunApp: %w", err)
 	}
 
-	e := NewEcho(cfg, db)
+	e := NewEcho(cfg.FrontendURL, db)
 
 	addr := fmt.Sprintf("0.0.0.0:%v", cfg.Port)
 	if err := e.Start(addr); err != nil {
