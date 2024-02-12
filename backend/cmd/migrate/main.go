@@ -20,8 +20,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	dsn := internal.BuildDSN(cfg)
-	db, err := internal.NewDB(ctx, dsn)
+	db, err := internal.NewDB(ctx, cfg.DatabaseDSN)
 	if err != nil {
 		panic(err)
 	}
