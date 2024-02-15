@@ -32,5 +32,8 @@ jobs:
       - name: Get dependencies
         run: go mod download
 
+      - name: Lint Go code with GolangCI-Lint
+        uses: golangci/golangci-lint-action@v4
+
       - name: Build
         run: go build -v ./...
