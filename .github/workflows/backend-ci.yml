@@ -27,8 +27,8 @@ jobs:
           go-version-file: "./backend/go.mod"
           cache-dependency-path: "./backend/go.sum"
 
-      # - name: Get dependencies
-      #   run: go mod download
+      - name: Get dependencies
+        run: go mod download -x
 
       - name: Lint Go code with GolangCI-Lint
         uses: golangci/golangci-lint-action@v4
