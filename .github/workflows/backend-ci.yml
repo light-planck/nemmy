@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: backend
 
       - name: Set up Go
         uses: actions/setup-go@v5
