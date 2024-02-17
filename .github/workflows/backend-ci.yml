@@ -47,8 +47,9 @@ jobs:
           go-version-file: "./backend/go.mod"
           cache-dependency-path: "./backend/go.sum"
 
-      - name: Lint Go code with GolangCI-Lint
-        uses: golangci/golangci-lint-action@v3
+      - name: Lint
+        uses: golangci/golangci-lint-action@v4
         with:
           version: latest
+          skip-pkg-cache: true
           working-directory: backend
