@@ -28,7 +28,7 @@ jobs:
           cache-dependency-path: "./backend/go.sum"
 
       - name: Get dependencies
-        run: go mod download
+        run: go mod download -x
 
       - name: Build
         run: go build -v ./...
