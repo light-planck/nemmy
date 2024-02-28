@@ -25,6 +25,16 @@ updates:
     commit-message:
       prefix: "chore(frontend)"
 
+  - package-ecosystem: "npm"
+    directory: "/openapi"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "chore(openapi)"
+
   - package-ecosystem: "gomod"
     directory: "/backend"
     schedule:

@@ -4,7 +4,7 @@ import "swagger-ui-react/swagger-ui.css";
 const App = () => {
   return (
     <div className="App">
-      <SwaggerUI url={'openapi.yaml'} />
+      <SwaggerUI url="openapi.yaml" />
     </div>
   );
 };
