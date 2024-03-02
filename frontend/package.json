@@ -16,7 +16,7 @@
     "@typescript-eslint/parser": "^6.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "lucide-react": "^0.341.0",
+    "lucide-react": "^0.344.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
