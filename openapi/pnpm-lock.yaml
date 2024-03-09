@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^18.2.64
     version: 18.2.64
   '@types/react-dom':
-    specifier: ^18.2.19
-    version: 18.2.19
+    specifier: ^18.2.21
+    version: 18.2.21
   '@types/swagger-ui-react':
     specifier: ^4.18.3
     version: 4.18.3
@@ -538,6 +538,7 @@ packages:
 
   /@swagger-api/apidom-ns-json-schema-draft-4@0.96.0:
     resolution: {integrity: sha512-bEQI/u15L6NLF7IW3DHEstJW64f8DSYqDR4vHdgrJ/GyA/c+N4K1St1LhKfA+WuBs7DX3JNKNZ3APAkq5gqWTA==}
+    requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': 7.24.0
       '@swagger-api/apidom-ast': 0.96.0
@@ -1020,8 +1021,8 @@ packages:
       types-ramda: 0.29.8
     dev: true
 
-  /@types/react-dom@18.2.19:
-    resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
+  /@types/react-dom@18.2.21:
+    resolution: {integrity: sha512-gnvBA/21SA4xxqNXEwNiVcP0xSGHh/gi1VhWv9Bl46a0ItbTT5nFY+G9VSQpaG/8N/qdJpJ+vftQ4zflTtnjLw==}
     dependencies:
       '@types/react': 18.2.64
     dev: true
