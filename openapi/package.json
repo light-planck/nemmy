@@ -25,6 +25,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "swagger-ui-react": "^5.11.8",
     "typescript": "^5.3.3",
-    "vite": "^5.1.4"
+    "vite": "^5.1.5"
   }
 }
