@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    backend-linter:
+      root: "backend/"
+      glob: "*.{go}"
+      run: docker container run -q --rm -v $(pwd):/app -w /app golangci/golangci-lint:v1.55.2 golangci-lint run --fix
+
+post-merge:
+  parallel: true
+  commands:
+    frontend-dependencies-update:
+      root: "frontend/"
+      run: pnpm install --frozen-lockfile
+    openapi-dependencies-update:
+      root: "openapi/"
+      run: pnpm install --frozen-lockfile
