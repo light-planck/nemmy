@@ -1,2 +1,0 @@
-cd frontend
-pnpm install --frozen-lockfile

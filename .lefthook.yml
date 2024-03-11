@@ -1,7 +1,0 @@
-pre-commit:
-  parallel: true
-  commands:
-    backend-linter:
-      root: "backend/"
-      glob: "*.{go}"
-      run: docker container run -q --rm -v $(pwd):/app -w /app golangci/golangci-lint:v1.55.2 golangci-lint run --fix
