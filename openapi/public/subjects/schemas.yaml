@@ -1,4 +1,5 @@
 Subject:
+  type: object
   required:
     - id
     - name
