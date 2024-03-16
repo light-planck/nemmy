@@ -12,5 +12,5 @@ Government of the nemmy, by the nemmy, for the nemmy.
 | ------- | ------- | ------- |
 | /frontend | フロントエンド | <https://nemmy.vercel.app/> |
 | /backend | バックエンド | 絶賛開発中！！！<> |
-| /openapi | apiの仕様 | <https://nemmy-openapi.vercel.app/> |
+| /swagger | apiの仕様 | <https://nemmy-swagger.vercel.app/> |
 | /dbdocs | データベースの仕様 | <https://dbdocs.io/light-planck/nemmy> |
