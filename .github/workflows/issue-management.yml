@@ -1,0 +1,31 @@
+name: Manage Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@RELEASE_VERSION
+        with:
+          project-url: https://github.com/users/light-planck/projects/9
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+  assign-author:
+    name: Assign issue to author
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              assignees: [context.payload.issue.user.login]
+            })
