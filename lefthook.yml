@@ -1,13 +1,6 @@
 pre-commit:
   parallel: true
   commands:
-    frontend-linter:
-      root: "frontend/"
-      glob: "*.{js,jsx,ts,tsx}"
-      run: pnpm eslint --fix {staged_files}
-    frontend-style:
-      root: "frontend/"
-      run: pnpm prettier --write --ignore-unknown {staged_files}
     backend-linter:
       root: "backend/"
       glob: "*.{go}"
