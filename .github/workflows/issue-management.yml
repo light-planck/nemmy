@@ -6,15 +6,6 @@ on:
       - opened
 
 jobs:
-  add-project:
-    name: Add issue to project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/add-to-project@0.5.0
-        with:
-          project-url: https://github.com/users/light-planck/projects/9
-          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-
   assign-author:
     name: Assign issue to author
     runs-on: ubuntu-latest
