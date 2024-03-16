@@ -12,6 +12,6 @@ post-merge:
     frontend-dependencies-update:
       root: "frontend/"
       run: pnpm install --frozen-lockfile
-    openapi-dependencies-update:
-      root: "openapi/"
+    swagger-dependencies-update:
+      root: "swagger/"
       run: pnpm install --frozen-lockfile

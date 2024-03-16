@@ -26,14 +26,14 @@ updates:
       prefix: "chore(frontend)"
 
   - package-ecosystem: "npm"
-    directory: "/openapi"
+    directory: "/swagger"
     schedule:
       interval: "weekly"
       day: "sunday"
       time: "00:00"
       timezone: "Asia/Tokyo"
     commit-message:
-      prefix: "chore(openapi)"
+      prefix: "chore(swagger)"
 
   - package-ecosystem: "gomod"
     directory: "/backend"
