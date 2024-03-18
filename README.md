@@ -8,9 +8,9 @@ Government of the nemmy, by the nemmy, for the nemmy.
 
 ## プロジェクト構成
 
-| ディレクトリ | 役割 | リンク |
-| ------- | ------- | ------- |
-| /frontend | フロントエンド | <https://nemmy.vercel.app/> |
-| /backend | バックエンド | 絶賛開発中！！！<> |
-| /swagger | apiの仕様 | <https://nemmy-swagger.vercel.app/> |
-| /dbdocs | データベースの仕様 | <https://dbdocs.io/light-planck/nemmy> |
+| ディレクトリ | 役割               | リンク                                 |
+| ------------ | ------------------ | -------------------------------------- |
+| /frontend    | フロントエンド     | <https://nemmy.vercel.app/>            |
+| /backend     | バックエンド       | 絶賛開発中！！！<>                     |
+| /swagger     | api の仕様         | <https://nemmy-swagger.pages.dev/>     |
+| /dbdocs      | データベースの仕様 | <https://dbdocs.io/light-planck/nemmy> |
