@@ -23,7 +23,7 @@ install_npm_dependencies() {
 }
 
 main() {
-  check_requrired_command lefthook pnpm
+  check_requrired_command lefthook pnpm task docker
   lefthook install
   install_npm_dependencies frontend swagger
 }
