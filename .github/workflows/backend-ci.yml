@@ -50,3 +50,13 @@ jobs:
           version: latest
           skip-pkg-cache: true
           working-directory: backend
+
+  govulncheck:
+    name: Run govulncheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: golang/govulncheck-action@v1
+        with:
+          work-dir: backend
+          go-version-file: "./backend/go.mod"
