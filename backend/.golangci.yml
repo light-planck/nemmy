@@ -1,3 +1,30 @@
 linters:
+  disable-all: true
   enable:
+    # enabled by default
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    # disabled by default
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - errchkjson
+    - gocritic
     - gofmt
+    - gosec
+    - mirror
+    - nakedret
+    - nilerr
+    - nolintlint
+    - predeclared
+    - revive
+    - sloglint
+    - sqlclosecheck
+    - stylecheck
+    - tenv
+    - usestdlibvars # 勉強になりそうなので有効にしてみた。場合によっては邪魔になるかも
+    - wrapcheck
