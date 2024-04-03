@@ -60,4 +60,4 @@ jobs:
         with:
           work-dir: backend
           go-version-file: "./backend/go.mod"
-          cache: "./backend/go.sum"
+          cache: true
