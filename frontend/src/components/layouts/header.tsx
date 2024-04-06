@@ -50,13 +50,15 @@ export const Header = () => {
         </NavigationMenu>
         {loggedIn ? (
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Avatar>
-                <AvatarImage src="https://github.com/light-planck.png" />
-                <AvatarFallback>
-                  <Skeleton className="h-12 w-12 rounded-full" />
-                </AvatarFallback>
-              </Avatar>
+            <DropdownMenuTrigger asChild>
+              <div className="flex justify-end w-40">
+                <Avatar>
+                  <AvatarImage src="https://github.com/light-planck.png" />
+                  <AvatarFallback>
+                    <Skeleton className="h-12 w-12 rounded-full" />
+                  </AvatarFallback>
+                </Avatar>
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>プロフィール</DropdownMenuItem>
@@ -67,7 +69,9 @@ export const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button onClick={() => setLoggedIn(true)}>ログイン</Button>
+          <div className="flex justify-end w-40">
+            <Button onClick={() => setLoggedIn(true)}>ログイン</Button>
+          </div>
         )}
       </header>
       <Separator />
