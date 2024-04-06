@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,7 +11,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "../ui/navigation-menu";
 import { Separator } from "../ui/separator";
 import { Skeleton } from "../ui/skeleton";
 
@@ -34,7 +34,7 @@ export const Header = () => {
       <header className="flex p-5 justify-between">
         <h1 className="text-2xl">nemmy</h1>
         <NavigationMenu>
-          <NavigationMenuList className="flex">
+          <NavigationMenuList>
             {navigationItems.map((item) => (
               <NavigationMenuItem key={item.href}>
                 <Link href={item.href} legacyBehavior passHref>
