@@ -11,6 +11,12 @@ import { useState } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
 import { Separator } from "../ui/separator";
 import { Skeleton } from "../ui/skeleton";
@@ -43,12 +49,23 @@ export const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
         {loggedIn ? (
-          <Avatar>
-            <AvatarImage src="https://github.com/light-planck.png" />
-            <AvatarFallback>
-              <Skeleton className="h-12 w-12 rounded-full" />
-            </AvatarFallback>
-          </Avatar>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Avatar>
+                <AvatarImage src="https://github.com/light-planck.png" />
+                <AvatarFallback>
+                  <Skeleton className="h-12 w-12 rounded-full" />
+                </AvatarFallback>
+              </Avatar>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>プロフィール</DropdownMenuItem>
+              <DropdownMenuItem>設定</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setLoggedIn(false)}>
+                ログアウト
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         ) : (
           <Button onClick={() => setLoggedIn(true)}>ログイン</Button>
         )}
