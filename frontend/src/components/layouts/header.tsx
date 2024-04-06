@@ -31,7 +31,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="flex p-5 gap-2 justify-between">
+      <header className="flex p-5 justify-between">
         <h1 className="text-2xl">nemmy</h1>
         <NavigationMenu>
           <NavigationMenuList className="flex">
