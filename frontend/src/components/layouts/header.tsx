@@ -7,8 +7,10 @@ import {
   NavigationMenuList,
 } from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
+import { useState } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Button } from "../ui/button";
 import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
 import { Separator } from "../ui/separator";
 import { Skeleton } from "../ui/skeleton";
@@ -19,6 +21,8 @@ const navigationItems = [
 ] as const;
 
 export const Header = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <>
       <header className="flex p-5 gap-2 justify-between">
@@ -38,12 +42,16 @@ export const Header = () => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <Avatar>
-          <AvatarImage src="https://github.com/light-planck.png" />
-          <AvatarFallback>
-            <Skeleton className="h-12 w-12 rounded-full" />
-          </AvatarFallback>
-        </Avatar>
+        {loggedIn ? (
+          <Avatar>
+            <AvatarImage src="https://github.com/light-planck.png" />
+            <AvatarFallback>
+              <Skeleton className="h-12 w-12 rounded-full" />
+            </AvatarFallback>
+          </Avatar>
+        ) : (
+          <Button onClick={() => setLoggedIn(true)}>ログイン</Button>
+        )}
       </header>
       <Separator />
     </>
