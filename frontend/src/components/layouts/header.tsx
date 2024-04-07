@@ -24,6 +24,7 @@ import { Skeleton } from "../ui/skeleton";
 const navigationItems = [
   { href: "/", label: "ホーム" },
   { href: "/subjects", label: "教材一覧" },
+  { href: "/reports", label: "統計レポート" },
 ] as const;
 
 export const Header = () => {
