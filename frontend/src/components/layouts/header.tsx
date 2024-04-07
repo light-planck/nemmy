@@ -33,7 +33,9 @@ export const Header = () => {
   return (
     <>
       <header className="flex p-5 justify-between">
-        <h1 className="text-2xl">nemmy</h1>
+        <h1 className="text-2xl">
+          <Link href="/">nemmy</Link>
+        </h1>
         <NavigationMenu>
           <NavigationMenuList>
             {navigationItems.map((item) => (
