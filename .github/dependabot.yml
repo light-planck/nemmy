@@ -31,23 +31,3 @@ updates:
       timezone: "Asia/Tokyo"
     commit-message:
       prefix: "chore(swagger)"
-
-  - package-ecosystem: "gomod"
-    directory: "/backend"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "00:00"
-      timezone: "Asia/Tokyo"
-    commit-message:
-      prefix: "chore(gomod)"
-
-  - package-ecosystem: "docker"
-    directory: "/backend"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "00:00"
-      timezone: "Asia/Tokyo"
-    commit-message:
-      prefix: "chore(docker)"
