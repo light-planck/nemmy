@@ -1,4 +1,4 @@
-subjects:
+users-{username}-subjects:
   get:
     summary: ユーザーに紐づく教材の一覧を取得
     operationId: listUserSubjects
@@ -57,7 +57,7 @@ subjects:
             schema:
               $ref: "./schemas.yaml#/Subject"
 
-subjects_{subjectId}:
+users-{username}-subjects-{subjectId}:
   get:
     summary: ユーザーに紐づく教材の詳細を取得
     operationId: getUserSubject
