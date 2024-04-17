@@ -12,9 +12,9 @@ servers:
 
 paths:
   /users/{username}/subjects:
-    $ref: "./subjects/paths.yaml#/subjects"
+    $ref: "./subjects/paths.yaml#/paths/users-{username}-subjects"
   /users/{username}/subjects/{subjectId}:
-    $ref: "./subjects/paths.yaml#/subjects_{subjectId}"
+    $ref: "./subjects/paths.yaml#/paths/users-{username}-subjects-{subjectId}"
 
 components:
   schemas:

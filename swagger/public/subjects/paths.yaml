@@ -1,138 +1,139 @@
-subjects:
-  get:
-    summary: ユーザーに紐づく教材の一覧を取得
-    operationId: listUserSubjects
-    tags:
-      - subjects
-    parameters:
-      - name: username
-        in: path
+paths:
+  users-{username}-subjects:
+    get:
+      summary: ユーザーに紐づく教材の一覧を取得
+      operationId: listUserSubjects
+      tags:
+        - subjects
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: ユーザーネーム
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ユーザーに紐づく教材の一覧
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./schemas.yaml#/Subject"
+    post:
+      summary: ユーザーに紐づく教材を作成
+      operationId: createUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: ユーザーネーム
+          schema:
+            type: string
+      requestBody:
+        description: ユーザーに紐づく教材の情報
         required: true
-        description: ユーザーネーム
-        schema:
-          type: string
-    responses:
-      "200":
-        description: ユーザーに紐づく教材の一覧
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              properties:
+                username:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+              required:
+                - username
+                - name
+      responses:
+        "201":
+          description: ユーザーに紐づく教材の作成
+          content:
+            application/json:
+              schema:
                 $ref: "./schemas.yaml#/Subject"
-  post:
-    summary: ユーザーに紐づく教材を作成
-    operationId: createUserSubject
-    tags:
-      - subjects
-    parameters:
-      - name: username
-        in: path
-        required: true
-        description: ユーザーネーム
-        schema:
-          type: string
-    requestBody:
-      description: ユーザーに紐づく教材の情報
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              username:
-                type: string
-              name:
-                type: string
-              description:
-                type: string
-            required:
-              - username
-              - name
-    responses:
-      "201":
-        description: ユーザーに紐づく教材の作成
-        content:
-          application/json:
-            schema:
-              $ref: "./schemas.yaml#/Subject"
 
-subjects_{subjectId}:
-  get:
-    summary: ユーザーに紐づく教材の詳細を取得
-    operationId: getUserSubject
-    tags:
-      - subjects
-    parameters:
-      - name: username
-        in: path
-        required: true
-        description: ユーザーネーム
-        schema:
-          type: string
-      - name: subjectId
-        in: path
-        required: true
-        description: 教材のID
-        schema:
-          type: string
-    responses:
-      "200":
-        description: ユーザーに紐づく教材の詳細
-        content:
-          application/json:
-            schema:
-              $ref: "./schemas.yaml#/Subject"
-  put:
-    summary: ユーザーに紐づく教材の詳細を更新
-    operationId: updateUserSubject
-    tags:
-      - subjects
-    parameters:
-      - name: username
-        in: path
-        required: true
-        description: ユーザーネーム
-        schema:
-          type: string
-      - name: subjectId
-        in: path
-        required: true
-        description: 教材のID
-        schema:
-          type: string
-    requestBody:
-      description: ユーザーに紐づく教材の情報
-      required: true
-      content:
-        application/json:
+  users-{username}-subjects-{subjectId}:
+    get:
+      summary: ユーザーに紐づく教材の詳細を取得
+      operationId: getUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: ユーザーネーム
           schema:
-            $ref: "./schemas.yaml#/Subject"
-    responses:
-      "200":
-        description: ユーザーに紐づく教材の更新
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ユーザーに紐づく教材の詳細
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas.yaml#/Subject"
+    put:
+      summary: ユーザーに紐づく教材の詳細を更新
+      operationId: updateUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: ユーザーネーム
+          schema:
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      requestBody:
+        description: ユーザーに紐づく教材の情報
+        required: true
         content:
           application/json:
             schema:
               $ref: "./schemas.yaml#/Subject"
-  delete:
-    summary: ユーザーに紐づく教材を削除
-    operationId: deleteUserSubject
-    tags:
-      - subjects
-    parameters:
-      - name: username
-        in: path
-        required: true
-        description: ユーザーネーム
-        schema:
-          type: string
-      - name: subjectId
-        in: path
-        required: true
-        description: 教材のID
-        schema:
-          type: string
-    responses:
-      "204":
-        description: ユーザーに紐づく教材の削除
+      responses:
+        "200":
+          description: ユーザーに紐づく教材の更新
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas.yaml#/Subject"
+    delete:
+      summary: ユーザーに紐づく教材を削除
+      operationId: deleteUserSubject
+      tags:
+        - subjects
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: ユーザーネーム
+          schema:
+            type: string
+        - name: subjectId
+          in: path
+          required: true
+          description: 教材のID
+          schema:
+            type: string
+      responses:
+        "204":
+          description: ユーザーに紐づく教材の削除
