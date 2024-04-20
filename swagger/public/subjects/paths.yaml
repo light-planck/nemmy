@@ -1,17 +1,12 @@
 paths:
   users-{username}-subjects:
+    parameters:
+      - $ref: "#/components/parameters/username"
     get:
       summary: ユーザーに紐づく教材の一覧を取得
       operationId: listUserSubjects
       tags:
         - subjects
-      parameters:
-        - name: username
-          in: path
-          required: true
-          description: ユーザーネーム
-          schema:
-            type: string
       responses:
         "200":
           description: ユーザーに紐づく教材の一覧
@@ -26,13 +21,6 @@ paths:
       operationId: createUserSubject
       tags:
         - subjects
-      parameters:
-        - name: username
-          in: path
-          required: true
-          description: ユーザーネーム
-          schema:
-            type: string
       requestBody:
         description: ユーザーに紐づく教材の情報
         required: true
@@ -59,24 +47,14 @@ paths:
                 $ref: "./schemas.yaml#/Subject"
 
   users-{username}-subjects-{subjectId}:
+    parameters:
+      - $ref: "#/components/parameters/username"
+      - $ref: "#/components/parameters/subjectId"
     get:
       summary: ユーザーに紐づく教材の詳細を取得
       operationId: getUserSubject
       tags:
         - subjects
-      parameters:
-        - name: username
-          in: path
-          required: true
-          description: ユーザーネーム
-          schema:
-            type: string
-        - name: subjectId
-          in: path
-          required: true
-          description: 教材のID
-          schema:
-            type: string
       responses:
         "200":
           description: ユーザーに紐づく教材の詳細
@@ -89,19 +67,6 @@ paths:
       operationId: updateUserSubject
       tags:
         - subjects
-      parameters:
-        - name: username
-          in: path
-          required: true
-          description: ユーザーネーム
-          schema:
-            type: string
-        - name: subjectId
-          in: path
-          required: true
-          description: 教材のID
-          schema:
-            type: string
       requestBody:
         description: ユーザーに紐づく教材の情報
         required: true
@@ -121,19 +86,23 @@ paths:
       operationId: deleteUserSubject
       tags:
         - subjects
-      parameters:
-        - name: username
-          in: path
-          required: true
-          description: ユーザーネーム
-          schema:
-            type: string
-        - name: subjectId
-          in: path
-          required: true
-          description: 教材のID
-          schema:
-            type: string
       responses:
         "204":
           description: ユーザーに紐づく教材の削除
+
+components:
+  parameters:
+    username:
+      name: username
+      in: path
+      required: true
+      description: ユーザーネーム
+      schema:
+        type: string
+    subjectId:
+      name: subjectId
+      in: path
+      required: true
+      description: 教材のID
+      schema:
+        type: string
