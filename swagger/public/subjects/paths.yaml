@@ -14,7 +14,7 @@ paths:
             type: string
       responses:
         "200":
-          description: ユーザーに紐づく教材の一覧
+          description: 成功
           content:
             application/json:
               schema:
@@ -52,7 +52,7 @@ paths:
                 - name
       responses:
         "201":
-          description: ユーザーに紐づく教材の作成
+          description: 成功
           content:
             application/json:
               schema:
@@ -79,7 +79,7 @@ paths:
             type: string
       responses:
         "200":
-          description: ユーザーに紐づく教材の詳細
+          description: 成功
           content:
             application/json:
               schema:
@@ -111,7 +111,7 @@ paths:
               $ref: "./schemas.yaml#/Subject"
       responses:
         "200":
-          description: ユーザーに紐づく教材の更新
+          description: 成功
           content:
             application/json:
               schema:
@@ -136,4 +136,4 @@ paths:
             type: string
       responses:
         "204":
-          description: ユーザーに紐づく教材の削除
+          description: 成功
