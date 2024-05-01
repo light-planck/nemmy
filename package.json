@@ -11,5 +11,8 @@
     "light-planck",
     "ynm3n"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }
