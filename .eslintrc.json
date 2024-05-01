@@ -1,13 +1,23 @@
 {
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
   "extends": [
     "next/core-web-vitals",
     "prettier",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "@typescript-eslint"],
+  "plugins": ["import", "@typescript-eslint", "react-refresh"],
   "rules": {
+    "react-refresh/only-export-components": {
+      "warn": true,
+      "allowConstantExport": true
+    },
     "import/order": [
       "error",
       {
