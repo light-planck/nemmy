@@ -5,7 +5,7 @@
   "scripts": {
     "dev:front": "pnpm --filter nemmy-frontend dev",
     "dev:swagger": "pnpm --filter nemmy-swagger dev",
-    "build:front": "pnpm --filter nemmy-frontend build"
+    "next": "pnpm --filter nemmy-frontend build"
   },
   "keywords": [],
   "author": "nemmy-institute",
