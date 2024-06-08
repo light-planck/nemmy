@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "pnpm -r --parallel --filter='./apps/*' dev",
     "dev:front": "pnpm --filter nemmy-frontend dev",
-    "dev:swagger": "pnpm --filter nemmy-swagger dev",
-    "next": "pnpm --filter nemmy-frontend build"
+    "dev:swagger": "pnpm --filter nemmy-swagger dev"
   },
   "keywords": [],
   "author": "nemmy-institute",
