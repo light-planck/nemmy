@@ -8,12 +8,12 @@ Government of the nemmy, by the nemmy, for the nemmy.
 
 ## Project Structure
 
-| Directory | Role               | Link                                 |
-| ------------ | ------------------ | -------------------------------------- |
-| frontend    | Front-end     | <https://nemmy.vercel.app>            |
-| backend     | Back-end       | <https://github.com/ynm3n/nemmy-backend>                     |
-| swagger     | API Documentation         | <https://nemmy-swagger.pages.dev>     |
-| dbdocs      | Database Documentation | <https://dbdocs.io/light-planck/nemmy> |
+| Role               | Link                                 |
+| ------------------ | -------------------------------------- |
+| Front-end     | <https://nemmy.vercel.app>            |
+| Back-end       | <https://github.com/ynm3n/nemmy-backend>                     |
+| API Documentation         | <https://nemmy-swagger.pages.dev>     |
+| Database Documentation | <https://dbdocs.io/light-planck/nemmy> |
 
 ## Setup
 
