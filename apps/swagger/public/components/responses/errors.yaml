@@ -1,0 +1,13 @@
+notFound:
+  description: 存在しないリソース
+  content:
+    application/problem+json:
+      schema:
+        $ref: "../schemas/errors.yaml#/Error"
+
+internalServerError:
+  description: サーバー内部のエラー
+  content:
+    application/problem+json:
+      schema:
+        $ref: "../schemas/errors.yaml#/Error"
