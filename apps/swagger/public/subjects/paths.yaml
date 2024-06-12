@@ -21,6 +21,10 @@ paths:
                 type: array
                 items:
                   $ref: "./schemas.yaml#/Subject"
+        "404":
+          $ref: "../components/responses/errors.yaml#/notFound"
+        "500":
+          $ref: "../components/responses/errors.yaml#/internalServerError"
     post:
       summary: ユーザーに紐づく教材を作成
       operationId: createUserSubject
@@ -57,6 +61,10 @@ paths:
             application/json:
               schema:
                 $ref: "./schemas.yaml#/Subject"
+        "404":
+          $ref: "../components/responses/errors.yaml#/notFound"
+        "500":
+          $ref: "../components/responses/errors.yaml#/internalServerError"
 
   users-{username}-subjects-{subjectId}:
     get:
@@ -84,6 +92,10 @@ paths:
             application/json:
               schema:
                 $ref: "./schemas.yaml#/Subject"
+        "404":
+          $ref: "../components/responses/errors.yaml#/notFound"
+        "500":
+          $ref: "../components/responses/errors.yaml#/internalServerError"
     put:
       summary: ユーザーに紐づく教材の詳細を更新
       operationId: updateUserSubject
@@ -116,6 +128,10 @@ paths:
             application/json:
               schema:
                 $ref: "./schemas.yaml#/Subject"
+        "404":
+          $ref: "../components/responses/errors.yaml#/notFound"
+        "500":
+          $ref: "../components/responses/errors.yaml#/internalServerError"
     delete:
       summary: ユーザーに紐づく教材を削除
       operationId: deleteUserSubject
@@ -137,3 +153,7 @@ paths:
       responses:
         "204":
           description: 成功
+        "404":
+          $ref: "../components/responses/errors.yaml#/notFound"
+        "500":
+          $ref: "../components/responses/errors.yaml#/internalServerError"
