@@ -4,13 +4,13 @@
   "dependencyDashboard": false,
   "packageRules": [
     {
-      "matchPackagePatterns": ["^frontend/package.json$"],
+      "matchPackagePatterns": ["^apps/frontend/package.json$"],
       "groupName": "frontend npm updates",
       "matchUpdateTypes": ["minor", "pin", "pinDigest"],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^swagger/package.json$"],
+      "matchPackagePatterns": ["^apps/swagger/package.json$"],
       "groupName": "swagger npm updates",
       "matchUpdateTypes": ["minor", "pin", "pinDigest"],
       "automerge": true
