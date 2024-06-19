@@ -8,12 +8,12 @@ Government of the nemmy, by the nemmy, for the nemmy.
 
 ## Project Structure
 
-| Role               | Link                                 |
-| ------------------ | -------------------------------------- |
-| Front-end     | <https://nemmy.vercel.app>            |
-| Back-end       | <https://github.com/ynm3n/nemmy-backend>                     |
-| API Documentation         | <https://nemmy-swagger.pages.dev>     |
-| Database Documentation | <https://dbdocs.io/light-planck/nemmy> |
+| Role                   | Link                                     |
+| ---------------------- | ---------------------------------------- |
+| Front-end              | <https://nemmy.vercel.app>               |
+| Back-end               | <https://github.com/ynm3n/nemmy-backend> |
+| API Documentation      | <https://nemmy-swagger.pages.dev>        |
+| Database Documentation | <https://dbdocs.io/light-planck/nemmy>   |
 
 ## Setup
 
@@ -23,7 +23,8 @@ Government of the nemmy, by the nemmy, for the nemmy.
 
 ```zsh
 mise install
-npm i -g pnpm
+corepack enable
+corepack use pnpm
 pnpm i
 ```
 
