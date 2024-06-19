@@ -20,3 +20,5 @@ components:
   schemas:
     Subject:
       $ref: "./subjects/schemas.yaml#/Subject"
+    Error:
+      $ref: "./components/schemas/errors.yaml#/Error"

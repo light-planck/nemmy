@@ -1,0 +1,12 @@
+Error:
+  type: object
+  required:
+    - title
+  properties:
+    type:
+      type: string
+      format: uri
+    title:
+      type: string
+    detail:
+      type: string
