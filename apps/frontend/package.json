@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write --ignore-unknown .",
-    "check": "prettier --check '**/*.{js,jsx,ts,tsx}' && next lint",
-    "prepare": "cd .. && husky frontend/.husky"
+    "check": "prettier --check '**/*.{js,jsx,ts,tsx}' && next lint"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
@@ -38,7 +37,6 @@
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
