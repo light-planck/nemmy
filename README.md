@@ -12,7 +12,7 @@ Government of the nemmy, by the nemmy, for the nemmy.
 | ---------------------- | ---------------------------------------- |
 | Front-end              | <https://nemmy.vercel.app>               |
 | Back-end               | <https://github.com/ynm3n/nemmy-backend> |
-| API Documentation      | <https://nemmy-swagger.pages.dev>        |
+| API Documentation      | <https://nemmy-swagger.vercel.app/>      |
 | Database Documentation | <https://dbdocs.io/light-planck/nemmy>   |
 
 ## Setup
@@ -28,15 +28,15 @@ corepack use pnpm
 pnpm i
 ```
 
-### Starting the Local Server
+## Starting the Local Server
 
-#### Front-end
+### Front-end
 
 ```zsh
 pnpm dev:front
 ```
 
-#### Swagger
+### Swagger
 
 ```zsh
 pnpm dev:swagger
