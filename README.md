@@ -12,7 +12,7 @@ Government of the nemmy, by the nemmy, for the nemmy.
 | ---------------------- | ---------------------------------------- |
 | Front-end              | <https://nemmy.vercel.app>               |
 | Back-end               | <https://github.com/ynm3n/nemmy-backend> |
-| API Documentation      | <https://nemmy-swagger.vercel.app/>      |
+| API Documentation      | <https://nemmy-swagger.vercel.app>       |
 | Database Documentation | <https://dbdocs.io/light-planck/nemmy>   |
 
 ## Setup
