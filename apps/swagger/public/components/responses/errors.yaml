@@ -5,12 +5,6 @@ notFound:
       schema:
         $ref: "../schemas/errors.yaml#/Error"
       examples:
-        userNotFound:
-          summary: ユーザーが見つからなかった時
-          value:
-            type: "about:blank"
-            title: 存在しないリソース
-            detail: ユーザーが存在しない
         notFound:
           summary: リソースが見つからなかった時
           value:
