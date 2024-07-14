@@ -1,19 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "dependencyDashboard": false,
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["^apps/frontend/package.json$"],
-      "groupName": "frontend npm updates",
-      "matchUpdateTypes": ["minor", "pin", "pinDigest"],
-      "automerge": true
-    },
-    {
-      "matchPackagePatterns": ["^apps/swagger/package.json$"],
-      "groupName": "swagger npm updates",
-      "matchUpdateTypes": ["minor", "pin", "pinDigest"],
-      "automerge": true
-    }
-  ]
+  "extends": ["config:recommended"]
 }
